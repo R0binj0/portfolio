@@ -5,11 +5,27 @@
 
 :root{
     --main-color:#18122B;
-    --header-color:#393053;
+    --scroll-color:#2c263e;
     --text-color:#D21312;
     --shade-color:#635985;
     --button-color:#F15A59;
     --other-color:white;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--scroll-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--shade-color);
 }
 
 body{
@@ -19,6 +35,7 @@ body{
     gap: 120px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: var(--main-color);
+    overflow-x: hidden;
 }
 
 header{
@@ -26,6 +43,44 @@ header{
     display: flex;
     justify-content:space-between;
     background-color: var(--main-color);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+main{
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+a{
+    font-size: 30px;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+a:hover{
+    color: var(--button-color);
+}
+
+.foto img{
+    width: 500px;
+    height: 300px;
+}
+
+.project img{
+    width: 200px;
+    height: 300px;
+}
+
+.second_inside h1{
+    align-self: center;
+    color: var(--text-color);
+    font-size: 40px;
+    padding: 20px;
 }
 
 .logo{
@@ -40,14 +95,11 @@ header{
     gap: 30px;
 }
 
-a{
-    font-size: 30px;
-    text-decoration: none;
-    color: var(--text-color);
-}
-
-a:hover{
-    color: var(--button-color);
+.first_inside{
+    display: flex;
+    margin: auto;
+    width: 85%;
+    padding-bottom: 12rem;
 }
 
 .text{
@@ -55,20 +107,46 @@ a:hover{
     flex-direction: column;
     gap: 40px;
     color: var(--text-color);
+    width: 70%;
+}
+
+.project{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info{
+    color: var(--text-color);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.description{
+    width: 40%;
+}
+
+.second_inside{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 85%;
+    background-color: var(--main-color);
+    border-top: solid 1px var(--shade-color);
+}
+
+.list{
+    display: flex;
 }
 
 #typedtext{
     font-size: 30px;
 }
 
-main{
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-}
-
 #typedtext2{
     font-size: 25px;
-    width: 40%;
+    width: 70%;
 }
+
