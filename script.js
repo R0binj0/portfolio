@@ -6,6 +6,9 @@ var string2 = "I'm a junior developer who is passionate about the power of progr
 var str2 = string2.split("");
 var tt2 = document.getElementById('typedtext2');
 
+var content = document.getElementById("list");
+var button = document.getElementById("button_more");
+
 function delay(func, delayTime) {
     setTimeout(func, delayTime);
 };
@@ -24,11 +27,23 @@ function typing2() {
 
 };
 
+button.onclick = function () {
+
+	if(content.className == "open"){
+		content.className = "";
+		button.innerHTML = "SHOW MORE";
+	} else {
+		content.className = "open";
+		button.innerHTML = "SHOW LESS";
+	}
+
+};
+
 window.addEventListener('scroll', function() {
     var scrolled = window.pageYOffset;
     var first_inside = document.querySelector('.first_inside');
-    var second_inside = document.querySelector('.second_inside');
-    var blur = scrolled * 0.1;
+    var second_inside = document.querySelector('.paralax');
+    var blur = scrolled * 0.003;
 
     first_inside.style.filter = "blur(" + blur + "px)";
     first_inside.style.transform = 'translateY(' + scrolled * 0.5 + 'px)';
