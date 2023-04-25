@@ -6,8 +6,13 @@ var string2 = "I'm a junior developer who is passionate about the power of progr
 var str2 = string2.split("");
 var tt2 = document.getElementById('typedtext2');
 
-var content = document.getElementById("list");
-var button = document.getElementById("button_more");
+const sliderList = document.querySelector('.list');
+const projects = Array.from(document.querySelectorAll('.project'));
+const prevButton = document.querySelector('.prev');
+const nextButton = document.querySelector('.next');
+let currentIndex = 0;
+const slideWidth = sliderList.offsetWidth / 3;
+const maxIndex = Math.ceil(projects.length / 2) - 1;
 
 function delay(func, delayTime) {
     setTimeout(func, delayTime);
@@ -27,17 +32,19 @@ function typing2() {
 
 };
 
-button.onclick = function () {
+function updateSlider() {
+    sliderList.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+}
 
-	if(content.className == "open"){
-		content.className = "";
-		button.innerHTML = "SHOW MORE";
-	} else {
-		content.className = "open";
-		button.innerHTML = "SHOW LESS";
-	}
+function handlePrevClick() {
+    currentIndex = Math.max(currentIndex - 1, 0);
+    updateSlider();
+}
 
-};
+function handleNextClick() {
+    currentIndex = Math.min(currentIndex + 1, maxIndex);
+    updateSlider();
+}
 
 window.addEventListener('scroll', function() {
     var scrolled = window.pageYOffset;
@@ -49,6 +56,9 @@ window.addEventListener('scroll', function() {
     first_inside.style.transform = 'translateY(' + scrolled * 0.5 + 'px)';
     second_inside.style.transform = 'translateY(' + scrolled * -0.2 + 'px)';
 });
+
+prevButton.addEventListener('click', handlePrevClick);
+nextButton.addEventListener('click', handleNextClick);
 
 delay(function() {typing()}, 1000);
 delay(function() {typing2()}, 2800);

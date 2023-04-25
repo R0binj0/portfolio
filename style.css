@@ -79,6 +79,10 @@ a:hover{
     color: var(--button-color);
 }
 
+.slider-button:hover{
+    color: var(--button-color);
+}
+
 .foto img{
     position: sticky;
     width: 500px;
@@ -139,21 +143,69 @@ a:hover{
     flex-direction: column;
     border-top: solid 1px var(--shade-color);
     padding-bottom: 16rem;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
 }
 
-#list{
+.list{
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    padding:20px;
-    max-height: 300px;
-	overflow: hidden;
+    flex-wrap: nowrap;
+    transition: transform 0.3s ease-out;
 }
-#list.open {
-	max-height: 600px;
+
+.slider-button {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    color: var(--text-color);
+    background-color: var(--main-color);
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
 }
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.project {
+    flex: 0 0 calc(100% / 3);
+    max-width: 376px;
+    height: 500px;
+    background-color: var(--scroll-color);
+    margin: 0 20px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+}
+
+.project:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px var(--scroll-color);
+}
+
+.project::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    background-image: linear-gradient(to bottom right, var(--main-color), var(--button-color));
+    z-index: -1;
+    transition: all 0.5s ease-in-out;
+}
+
+.project:hover::before {
+  opacity: 0.6;
+}
+
 
 .third_inside{
     display: flex;
