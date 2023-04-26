@@ -7,7 +7,7 @@
     --main-color:#18122B;
     --scroll-color:#2c263e;
     --text-color:#D21312;
-    --shade-color:#635985;
+    --shade-color:#49435e;
     --button-color:#F15A59;
     --other-color:white;
 }
@@ -173,7 +173,7 @@ a:hover{
 
 .slider-button {
     position: absolute;
-    top: 45%;
+    top: 50%;
     transform: translateY(-50%);
     color: var(--text-color);
     background-color: var(--main-color);
@@ -216,4 +216,55 @@ a:hover{
 #typedtext2{
     font-size: 25px;
     width: 70%;
+}
+
+span{
+    float:right;
+    font-size:30px;
+    text-align: center;
+    padding-top: 5px;
+}
+
+.container{
+	width:90%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.wrapper{
+	background-color: var(--main-color);
+    height: 50px;
+}
+
+.html, .css, .javascript, .python{
+    background-color:var(--scroll-color);
+    width: 20%;
+    height: 50px;
+    font-size: 30px;
+    padding: 5px;
+}
+
+.html1, .css1, .javascript1, .python1{
+    transition:2s;
+	background-color:var(--scroll-color);
+    height: 50px;
+    font-size: 30px;
+    padding: 5px;
+}
+
+.html1{
+	width:94%;
+}
+
+.css1{
+    width:82%;
+}
+
+.javascript1{
+	width:64%;
+}
+
+.python1{
+	width:87%;
 }

@@ -14,10 +14,6 @@ let currentIndex = 0;
 const slideWidth = sliderList.offsetWidth / 3;
 const maxIndex = Math.ceil(projects.length / 2) - 1;
 
-function delay(func, delayTime) {
-    setTimeout(func, delayTime);
-};
-
 function typing() {
 
     str.length > 0 ? tt.innerHTML += str.shift() : clearTimeout(running); 
@@ -46,6 +42,22 @@ function handleNextClick() {
     updateSlider();
 }
 
+var python = function(){
+	document.querySelector(".python").className = "python1";
+};
+
+var css = function(){
+	document.querySelector(".css").className = "css1";
+};
+
+var html = function(){
+    document.querySelector(".html").className = "html1";	
+};
+
+var jav = function(){
+    document.querySelector(".javascript").className = "javascript1";	
+};
+
 window.addEventListener('scroll', function() {
     var scrolled = window.pageYOffset;
     var first_inside = document.querySelector('.first_inside');
@@ -60,5 +72,10 @@ window.addEventListener('scroll', function() {
 prevButton.addEventListener('click', handlePrevClick);
 nextButton.addEventListener('click', handleNextClick);
 
-delay(function() {typing()}, 1000);
-delay(function() {typing2()}, 2800);
+setTimeout(typing,1000);
+setTimeout(typing2,2800);
+
+setTimeout(html,1000);
+setTimeout(css,3000);
+setTimeout(jav,5000);
+setTimeout(python,7000);
