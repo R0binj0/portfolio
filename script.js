@@ -50,7 +50,7 @@ window.addEventListener('scroll', function() {
     var scrolled = window.pageYOffset;
     var first_inside = document.querySelector('.first_inside');
     var second_inside = document.querySelector('.paralax');
-    var blur = scrolled * 0.003;
+    var blur = scrolled * 0.005;
 
     first_inside.style.filter = "blur(" + blur + "px)";
     first_inside.style.transform = 'translateY(' + scrolled * 0.5 + 'px)';
