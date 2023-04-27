@@ -128,18 +128,23 @@ i:hover{
     display: block;
 }
 
+.project img:hover{
+    transform: scale(1.7);
+}
+
 .foto img{
     position: sticky;
     width: 300px;
     border: 1px solid var(--scroll-color);
     border-radius: 10px;
     box-shadow: 7px 15px 15px var(--shade-color);
-    opacity: 0.8;
 }
 
 .project img{
     width: 200px;
     height: 300px;
+    object-fit: contain;
+    transition: 1s;
 }
 
 .fourth_inside i{
@@ -153,6 +158,8 @@ i:hover{
 }
 
 .buttons{
+    display: flex;
+    align-items: center;
     padding-right: 20px;
     display: flex;
     gap: 30px;
@@ -295,14 +302,6 @@ i:hover{
 .links{
     display: flex;
     gap: 50px;
-}
-
-.meaning_html{
-    display: flex;
-    background-color: var(--other-color);
-    width: 94%;
-    padding: 5px;
-    height: 200px;
 }
 
 #typedtext{

@@ -69,6 +69,39 @@ window.addEventListener('scroll', function() {
     second_inside.style.transform = 'translateY(' + scrolled * -0.2 + 'px)';
 });
 
+const themes = {
+    light: {
+        "--main-color":"#FFFFFF",
+        "--scroll-color":"#F5F5F5",
+        "--text-color":"#333333",
+        "--shade-color":"#E0E0E0",
+        "--button-color":"#007AFF",
+        "--other-color":"#007AFF",
+    },
+    dark: {
+        "--main-color":"#212121",
+        "--scroll-color":"#303030",
+        "--text-color":"#FFFFFF",
+        "--shade-color":"#424242",
+        "--button-color":"#FF5722;",
+        "--other-color":"#F44336",
+    },
+};
+
+document.querySelectorAll('.color-button').forEach(el => {
+    el.addEventListener('click', () => {
+      const themeName = el.dataset.theme;
+      if (themes.hasOwnProperty(themeName)) {
+        const theme = themes[themeName];
+        for (const variable in theme) {
+          if (theme.hasOwnProperty(variable)) {
+            document.documentElement.style.setProperty(variable, theme[variable]);
+          }
+        }
+      }
+    });
+});
+
 prevButton.addEventListener('click', handlePrevClick);
 nextButton.addEventListener('click', handleNextClick);
 
