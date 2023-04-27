@@ -82,6 +82,13 @@ footer{
     height: 50px;
 }
 
+span{
+    float:right;
+    font-size:30px;
+    text-align: center;
+    padding-top: 5px;
+}
+
 a:hover{
     color: var(--button-color);
     transform: scale(1.1);
@@ -117,6 +124,10 @@ i:hover{
   opacity: 0.6;
 }
 
+.html:hover + .meaning_html {
+    display: block;
+}
+
 .foto img{
     position: sticky;
     width: 300px;
@@ -129,6 +140,11 @@ i:hover{
 .project img{
     width: 200px;
     height: 300px;
+}
+
+.fourth_inside i{
+    color: var(--shade-color);
+    font-size: 80px;
 }
 
 .logo{
@@ -232,22 +248,6 @@ i:hover{
     align-items: center;
 }
 
-#typedtext{
-    font-size: 30px;
-}
-
-#typedtext2{
-    font-size: 25px;
-    width: 70%;
-}
-
-span{
-    float:right;
-    font-size:30px;
-    text-align: center;
-    padding-top: 5px;
-}
-
 .container{
 	width:90%;
     display: flex;
@@ -292,12 +292,24 @@ span{
 	width:87%;
 }
 
-.fourth_inside i{
-    color: var(--shade-color);
-    font-size: 80px;
-}
-
 .links{
     display: flex;
     gap: 50px;
+}
+
+.meaning_html{
+    display: flex;
+    background-color: var(--other-color);
+    width: 94%;
+    padding: 5px;
+    height: 200px;
+}
+
+#typedtext{
+    font-size: 30px;
+}
+
+#typedtext2{
+    font-size: 25px;
+    width: 70%;
 }
