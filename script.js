@@ -42,7 +42,7 @@ function handleNextClick() {
     updateSlider();
 }
 
-var python = function(){
+var pyt = function(){
 	document.querySelector(".python").className = "python1";
 };
 
@@ -75,7 +75,7 @@ nextButton.addEventListener('click', handleNextClick);
 setTimeout(typing,1000);
 setTimeout(typing2,2800);
 
-setTimeout(html,1000);
-setTimeout(css,3000);
-setTimeout(jav,5000);
-setTimeout(python,7000);
+setTimeout(html,2000);
+setTimeout(css,4000);
+setTimeout(jav,6000);
+setTimeout(pyt,7000);
