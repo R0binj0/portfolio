@@ -124,9 +124,7 @@ i:hover{
   opacity: 0.6;
 }
 
-.html:hover + .meaning_html {
-    display: block;
-}
+.hover_outlook:hover + outlook
 
 .project img:hover{
     transform: scale(1.7);
@@ -150,6 +148,10 @@ i:hover{
 .fourth_inside i{
     color: var(--shade-color);
     font-size: 80px;
+}
+
+.color-button{
+    cursor: pointer;
 }
 
 .logo{
@@ -183,7 +185,7 @@ i:hover{
 
 .description{
     padding: 10px;
-    width: 40%;
+    width: 50%;
 }
 
 .paralax{

@@ -86,6 +86,14 @@ const themes = {
         "--button-color":"#FF5722;",
         "--other-color":"#F44336",
     },
+    normal: {
+        "--main-color":"#18122B",
+        "--scroll-color":"#2c263e",
+        "--text-color":"#D21312",
+        "--shade-color":"#49435e",
+        "--button-color":"#F15A59",
+        "--other-color":"#9a5252",
+    },
 };
 
 document.querySelectorAll('.color-button').forEach(el => {
