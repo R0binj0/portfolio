@@ -202,8 +202,9 @@ i:hover{
     border-top: solid 1px var(--shade-color);
     padding-bottom: 12rem;
     position: relative;
-    width: 100%;
+    width: 80%;
     overflow: hidden;
+    margin: auto;
 }
 
 .list{
@@ -236,7 +237,7 @@ i:hover{
     flex-direction: column;
     align-items: center;
     flex: 0 0 calc(100% / 3);
-    max-width: 376px;
+    max-width: 380px;
     height: 500px;
     background-color: var(--scroll-color);
     margin: 0 20px;
